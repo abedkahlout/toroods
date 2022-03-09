@@ -14,51 +14,77 @@ const routes: Array<RouteRecordRaw> = [
         name: "dashboard",
         component: () => import("@/views/Dashboard.vue"),
       },
- 
       {
         path: "/add",
         name: "add",
         component: () => import("@/views/Add.vue"),
+      },
+      {
+        path: "/mozaf",
+        name: "mozaf",
+        component: () => import("@/views/mozaf.vue"),
+      },
+      {
+        path: "/details",
+        name: "details",
+        component: () => import("@/views/CustomersTable.vue"),
+      },
+      {
+        path: "/customers",
+        name: "customers",
+        component: () => import("@/views/details.vue"),
+      },
+      {
+        path: "/over",
+        name: "over",
+        component: () => import("@/views/Overview.vue"),
+      },
+      {
+       
+        path: "/masge",
+        name: "masge",
+        component: () => import("@/views/Masge.vue"),
+      },
+      {
+       
+        path: "/torood",
+        name: "torood",
+        component: () => import("@/views/torood.vue"),
+      },
+      
+      {      
+        path: "/notificat",
+        name: "notificat",
+        component: () => import("@/views/notificat.vue"),
+      },
+      {
+        path: "/addclient",
+        name: "addclient",
+        component: () => import("@/views/Addclient.vue"),
+      },
+      {
+        path: "/personal",
+        name: "personal",
+        component: () => import("@/views/Personal.vue"),
+      },
+      {
+        path: "/message",
+        name: "message",
+        component: () => import("@/views/Message.vue"),
+      },
+ 
+      {
+        path: "/builder",
+        name: "builder",
+        component: () => import("@/views/Builder.vue"),
       },
  
     ],
   },
   
 
-  {
-    path: "/",
-    component: () => import("@/components/page-layouts/Auth.vue"),
-    children: [
-      {
-        path: "/sign-in",
-        name: "sign-in",
-        component: () =>
-          import("@/views/crafted/authentication/basic-flow/SignIn.vue"),
-      },
-      {
-        path: "/sign-up",
-        name: "sign-up",
-        component: () =>
-          import("@/views/crafted/authentication/basic-flow/SignUp.vue"),
-      },
-      {
-        path: "/password-reset",
-        name: "password-reset",
-        component: () =>
-          import("@/views/crafted/authentication/basic-flow/PasswordReset.vue"),
-      },
-    ],
-  },
-  {
-    // the 404 route, when none of the above matches
-    path: "/404",
-    name: "404",
-    component: () => import("@/views/crafted/authentication/Error404.vue"),
-  },
-  {
-    path: "/:pathMatch(.*)*",
-    redirect: "/404",
-  },
+
+ 
 ];
 
 const router = createRouter({
